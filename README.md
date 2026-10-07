@@ -68,5 +68,6 @@ GitHub Actions also syntax-checks all plugin entry points.
 
 ## License and support
 
-The toolkit is MIT licensed; see [LICENSE](LICENSE). Optional support: [Buy Me a Coffee](https://buymeacoffee.com/azizazimov8) · [Boosty](https://boosty.to/azizazimov). All plugins remain free; there is no paid version required.
+The toolkit is MIT licensed; see [LICENSE](LICENSE). Optional support: [Buy Me a Coffee](https://buymeacoffee.com/azizazimov8) · [Boosty](https://boosty.to/azizazimov) · [Gumroad](https://azimovian22.gumroad.com/). All plugins remain free; there is no paid version required.
+
 
