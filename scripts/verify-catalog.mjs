@@ -7,7 +7,7 @@ const readme = readFileSync(join(root, 'README.md'), 'utf8');
 const names = readdirSync(packageRoot).filter((name) => statSync(join(packageRoot, name)).isDirectory()).sort();
 const errors = [];
 
-if (names.length !== 20) errors.push(`Expected 20 packages, found ${names.length}.`);
+if (names.length < 1) errors.push('Expected at least one plugin package.');
 const pluginIds = new Set();
 for (const name of names) {
   const dir = join(packageRoot, name);

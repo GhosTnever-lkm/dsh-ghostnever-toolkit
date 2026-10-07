@@ -1,6 +1,6 @@
 # GhosTnever DSH Toolkit
 
-20 small, local-first plugins for DeepSeek Harness (DSH/Cordis). Each package is independently installable from this monorepo. Utilities only process the arguments sent to them; they do not read files, make network requests, or need API keys.
+21 small, local-first plugins for DeepSeek Harness (DSH/Cordis). Each package is independently installable from this monorepo. Utilities only process the arguments sent to them; they do not read files, make network requests, or need API keys.
 
 ## Install one plugin
 
@@ -19,6 +19,7 @@ Replace `<package-name>` with a package name from the catalog. For example, inst
 | Work with URLs, dates, encoding or hashes | `url-inspector`, `timestamp-converter`, `base64-codec`, `text-hash`, `uuid-batch` |
 | Prepare code changes and releases | `branch-name`, `commit-message`, `line-diff-summary`, `changelog-entry`, `semver-bump` |
 | Check or clean supplied content | `secret-redactor`, `html-entities`, `contrast-checker`, `byte-size` |
+| Set up a new repository | `gitignore-builder` |
 
 ## Verify before enabling
 
@@ -48,25 +49,9 @@ This repository is community-maintained and is not an official DeepSeek product.
 | `line-diff-summary` | Summarize added and removed lines between two text versions. |
 | `semver-bump` | Increment major, minor or patch in a strict semantic version. |
 | `checklist-builder` | Turn a list of tasks into a Markdown checklist. |
-## Packages
-- `json-inspector` - JSON Inspector
-- `markdown-outline` - Markdown Outline
-- `text-metrics` - Text Metrics
-- `csv-profiler` - CSV Profiler
-- `url-inspector` - URL Inspector
-- `timestamp-converter` - Timestamp Converter
-- `base64-codec` - Base64 Codec
-- `text-hash` - Text Hash
-- `uuid-batch` - UUID Batch
-- `contrast-checker` - Contrast Checker
-- `html-entities` - HTML Entities
-- `case-converter` - Case Converter
-- `byte-size` - Byte Size
-- `changelog-entry` - Changelog Entry
-- `branch-name` - Branch Name
-- `commit-message` - Commit Message
-- `secret-redactor` - Secret Redactor
-- `line-diff-summary` - Line Diff Summary
-- `semver-bump` - SemVer Bump
-- `checklist-builder` - Checklist Builder
+| `gitignore-builder` | Generate a deduplicated `.gitignore` for selected languages, tools, and operating systems. |
+
+## License
+
+The toolkit and its plugins are available under the MIT License. See [LICENSE](LICENSE).
 
