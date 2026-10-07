@@ -1,0 +1,8 @@
+{
+  "name": "dsh-ghostnever-toolkit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify:catalog": "node scripts/verify-catalog.mjs"
+  }
+}

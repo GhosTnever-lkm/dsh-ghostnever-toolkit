@@ -5,10 +5,24 @@
 ## Install one plugin
 
 ```sh
-dsh plugin --profile web add "github:GhosTnever-lkm/dsh-ghostnever-toolkit#path:/packages/json-inspector"
+dsh plugin --profile web add "github:GhosTnever-lkm/dsh-ghostnever-toolkit#path:/packages/<package-name>"
 ```
 
-Replace `json-inspector` with a folder from the catalog below. Start or restart the selected profile to load the bundle.
+Replace `<package-name>` with a package name from the catalog. For example, install the JSON Inspector with `#path:/packages/json-inspector`. Start or restart the selected profile to load the bundle. Each plugin is installed separately; there is no command that installs all 20.
+
+## Find a plugin
+
+| I need to… | Package |
+|---|---|
+| Inspect JSON or CSV | `json-inspector`, `csv-profiler` |
+| Format or measure text | `markdown-outline`, `text-metrics`, `case-converter`, `checklist-builder` |
+| Work with URLs, dates, encoding or hashes | `url-inspector`, `timestamp-converter`, `base64-codec`, `text-hash`, `uuid-batch` |
+| Prepare code changes and releases | `branch-name`, `commit-message`, `line-diff-summary`, `changelog-entry`, `semver-bump` |
+| Check or clean supplied content | `secret-redactor`, `html-entities`, `contrast-checker`, `byte-size` |
+
+## Verify before enabling
+
+This repository is community-maintained and is not an official DeepSeek product. Check the current DSH/Cordis documentation for compatibility before installing. To inspect a package without activating it, download or clone this repository, review that package's `index.js` and `cordis.patch.yml`, and install only after you trust the code. The tools are intended to process only the arguments passed to them; they do not need file access, network access, credentials, or an API key. Do not pass secrets to any plugin.
 
 ## Catalog
 
