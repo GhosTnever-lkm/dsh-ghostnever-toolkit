@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({version,part}) {const m=version.match(/^v?(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/);if(!m)throw new Error('Expected semantic version x.y.z.');let [a,b,c]=m.slice(1).map(Number);if(part==='major'){a++;b=0;c=0}else if(part==='minor'){b++;c=0}else if(part==='patch')c++;else throw new Error('part must be major, minor, or patch.');return {version:`${a}.${b}.${c}`} }
 

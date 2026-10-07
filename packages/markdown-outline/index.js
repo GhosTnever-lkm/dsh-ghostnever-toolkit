@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({markdown}) { const headings=[]; for(const m of markdown.slice(0,200000).matchAll(/^(#{1,6})\s+(.+?)\s*#*\s*$/gm)) headings.push({level:m[1].length,title:m[2],slug:m[2].toLowerCase().trim().replace(/[^\p{L}\p{N}\s-]/gu,'').replace(/\s+/g,'-')}); return {headings, toc:headings.map(h=>`${'  '.repeat(h.level-1)}- [${h.title}](#${h.slug})`).join('\n')} }
 

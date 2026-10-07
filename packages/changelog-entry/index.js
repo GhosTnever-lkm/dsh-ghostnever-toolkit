@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({version,date,added=[],changed=[],fixed=[],removed=[]}) {const groups=[['Added',added],['Changed',changed],['Fixed',fixed],['Removed',removed]].filter(([,a])=>a.length);if(groups.some(([,a])=>!Array.isArray(a)||a.length>30))throw new Error('Each section must be an array of up to 30 items.');return {markdown:`## [${version}] - ${date||new Date().toISOString().slice(0,10)}\n\n${groups.map(([h,a])=>`### ${h}\n${a.map(x=>`- ${String(x).slice(0,500)}`).join('\n')}`).join('\n\n')}`} }
 

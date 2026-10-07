@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({url}) { const u=new URL(url); return {protocol:u.protocol,hostname:u.hostname,port:u.port,pathname:u.pathname,query:Object.fromEntries(u.searchParams.entries()),hash:u.hash,hasCredentials:!!(u.username||u.password)} }
 

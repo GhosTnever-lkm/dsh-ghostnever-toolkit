@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({type,summary,scope,breaking=false}) {const allowed=['feat','fix','docs','style','refactor','perf','test','build','ci','chore','revert'];if(!allowed.includes(type))throw new Error('Unsupported Conventional Commit type.');const s=summary.trim().replace(/[\r\n]+/g,' ');if(!s||s.length>72)throw new Error('Summary must be 1 to 72 characters.');const sc=scope?`(${scope.replace(/[^a-zA-Z0-9._-]/g,'').slice(0,30)})`:'';return {message:`${type}${sc}${breaking?'!':''}: ${s}` } }
 

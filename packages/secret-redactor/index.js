@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({text}) {let count=0;const patterns=[/\bsk-[A-Za-z0-9_-]{16,}\b/g,/\bgh[pousr]_[A-Za-z0-9]{20,}\b/g,/\bgithub_pat_[A-Za-z0-9_]{20,}\b/g,/\bAKIA[0-9A-Z]{16}\b/g,/\bBearer\s+[A-Za-z0-9._~+/-]+=*/gi,/\b(password|passwd|secret|api[_-]?key)\s*[:=]\s*['"]?[^\s,'";]+/gi];let result=text;for(const p of patterns)result=result.replace(p,m=>{count++;const k=m.indexOf(':')>=0?m.slice(0,m.indexOf(':')+1):m.match(/^Bearer/i)?'Bearer ':'';return k+'[REDACTED]'});return {redactedText:result,replacements:count} }
 

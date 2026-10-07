@@ -1,4 +1,4 @@
-﻿# Commit Message
+# Commit Message
 
 Format a Conventional Commit subject from type and summary.
 

@@ -1,4 +1,4 @@
-﻿# Byte Size
+# Byte Size
 
 Convert bytes into readable binary and decimal size units.
 

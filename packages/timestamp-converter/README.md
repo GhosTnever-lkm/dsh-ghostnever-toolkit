@@ -1,4 +1,4 @@
-﻿# Timestamp Converter
+# Timestamp Converter
 
 Convert Unix seconds or milliseconds to ISO date and back.
 

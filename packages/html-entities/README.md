@@ -1,4 +1,4 @@
-﻿# HTML Entities
+# HTML Entities
 
 Escape or unescape HTML special characters.
 

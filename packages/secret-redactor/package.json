@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-secret-redactor",
   "version": "1.0.0",
   "description": "Mask common API token patterns in supplied text.",

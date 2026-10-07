@@ -1,4 +1,4 @@
-﻿# Contrast Checker
+# Contrast Checker
 
 Check WCAG contrast ratio between two hex colors.
 

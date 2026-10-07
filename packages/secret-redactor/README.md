@@ -1,4 +1,4 @@
-﻿# Secret Redactor
+# Secret Redactor
 
 Mask common API token patterns in supplied text.
 

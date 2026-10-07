@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({before,after}) {const a=before.split(/\r?\n/),b=after.split(/\r?\n/);if(a.length>300||b.length>300)throw new Error('Each input is limited to 300 lines.');let dp=Array.from({length:a.length+1},()=>new Uint16Array(b.length+1));for(let i=a.length-1;i>=0;i--)for(let j=b.length-1;j>=0;j--)dp[i][j]=a[i]===b[j]?dp[i+1][j+1]+1:Math.max(dp[i+1][j],dp[i][j+1]);let i=0,j=0,added=0,removed=0;const changes=[];while(i<a.length||j<b.length){if(i<a.length&&j<b.length&&a[i]===b[j]){i++;j++}else if(j<b.length&&(i===a.length||dp[i][j+1]>=dp[i+1][j])){added++;changes.push({type:'add',line:b[j++]})}else{removed++;changes.push({type:'remove',line:a[i++]})}}return {added,removed,changes:changes.slice(0,100)} }
 

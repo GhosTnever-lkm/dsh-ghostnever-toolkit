@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-line-diff-summary",
   "version": "1.0.0",
   "description": "Summarize added and removed lines between two text versions.",

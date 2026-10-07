@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-timestamp-converter",
   "version": "1.0.0",
   "description": "Convert Unix seconds or milliseconds to ISO date and back.",

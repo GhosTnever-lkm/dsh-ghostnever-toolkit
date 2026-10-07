@@ -1,4 +1,4 @@
-﻿# UUID Batch
+# UUID Batch
 
 Generate up to 20 random UUID v4 identifiers.
 

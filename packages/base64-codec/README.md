@@ -1,4 +1,4 @@
-﻿# Base64 Codec
+# Base64 Codec
 
 Encode UTF-8 text to Base64 or decode Base64 to UTF-8.
 

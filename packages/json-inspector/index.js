@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({input}) { const v=JSON.parse(input); return {valid:true, rootType:Array.isArray(v)?'array':v===null?'null':typeof v, keys:v&&typeof v==='object'&&!Array.isArray(v)?Object.keys(v).slice(0,100):[], length:Array.isArray(v)?v.length:typeof v==='string'?v.length:undefined, formatted:JSON.stringify(v,null,2).slice(0,20000)} }
 

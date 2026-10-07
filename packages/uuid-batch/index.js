@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 import { randomUUID } from 'node:crypto';
 
 function run({count=1}) { const n=Number(count); if(!Number.isInteger(n)||n<1||n>20) throw new Error('count must be an integer from 1 to 20.'); return {uuids:Array.from({length:n},()=>randomUUID())} }

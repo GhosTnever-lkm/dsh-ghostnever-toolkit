@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-case-converter",
   "version": "1.0.0",
   "description": "Convert text between camel, Pascal, snake, kebab and title case.",

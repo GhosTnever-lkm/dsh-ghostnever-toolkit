@@ -1,4 +1,4 @@
-﻿# Case Converter
+# Case Converter
 
 Convert text between camel, Pascal, snake, kebab and title case.
 

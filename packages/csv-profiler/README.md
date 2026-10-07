@@ -1,4 +1,4 @@
-﻿# CSV Profiler
+# CSV Profiler
 
 Inspect a CSV sample: dimensions, headers and empty cells.
 

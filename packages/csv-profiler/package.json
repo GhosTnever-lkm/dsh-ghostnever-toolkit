@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-csv-profiler",
   "version": "1.0.0",
   "description": "Inspect a CSV sample: dimensions, headers and empty cells.",

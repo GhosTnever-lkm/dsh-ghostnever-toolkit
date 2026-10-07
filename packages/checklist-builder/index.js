@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({items,checked=[]}) {if(!Array.isArray(items)||items.length>100)throw new Error('Provide up to 100 items.');const done=new Set(checked);return {markdown:items.map((x,i)=>`- [${done.has(i)?'x':' '}] ${String(x).replace(/[\r\n]+/g,' ').slice(0,300)}`).join('\n'),items:items.length,checked:done.size} }
 

@@ -1,4 +1,4 @@
-﻿# Changelog Entry
+# Changelog Entry
 
 Format release notes using Keep a Changelog sections.
 

@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({bytes}) { const n=Number(bytes);if(!Number.isFinite(n)||n<0)throw new Error('bytes must be a non-negative number.');const fmt=(base,units)=>{if(!n)return `0 ${units[0]}`;const i=Math.min(Math.floor(Math.log(n)/Math.log(base)),units.length-1);return `${(n/base**i).toFixed(i?2:0)} ${units[i]}`};return {bytes:n,binary:fmt(1024,['B','KiB','MiB','GiB','TiB']),decimal:fmt(1000,['B','kB','MB','GB','TB'])} }
 

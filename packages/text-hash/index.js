@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 import { createHash } from 'node:crypto';
 
 function run({text,algorithm}) { const a=algorithm.toLowerCase(); if(!['sha256','sha384','sha512'].includes(a)) throw new Error('Choose sha256, sha384, or sha512.'); return {algorithm:a,hex:createHash(a).update(text,'utf8').digest('hex')} }

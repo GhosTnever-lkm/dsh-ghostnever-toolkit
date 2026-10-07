@@ -1,4 +1,4 @@
-﻿# Text Metrics
+# Text Metrics
 
 Count characters, words, lines and estimate tokens.
 

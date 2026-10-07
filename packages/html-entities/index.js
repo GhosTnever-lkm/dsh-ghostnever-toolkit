@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({text,mode}) { if(mode==='escape') return {result:text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}; if(mode==='unescape') return {result:text.replace(/&(amp|lt|gt|quot|#39);/g,(_,x)=>({'amp':'&','lt':'<','gt':'>','quot':'"','#39':"'"}[x]))}; throw new Error('mode must be escape or unescape.'); }
 

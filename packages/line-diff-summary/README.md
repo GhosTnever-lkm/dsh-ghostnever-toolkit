@@ -1,4 +1,4 @@
-﻿# Line Diff Summary
+# Line Diff Summary
 
 Summarize added and removed lines between two text versions.
 

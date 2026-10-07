@@ -1,4 +1,4 @@
-﻿# SemVer Bump
+# SemVer Bump
 
 Increment major, minor or patch in a strict semantic version.
 

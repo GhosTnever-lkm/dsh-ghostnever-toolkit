@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({description,prefix='feature'}) {if(!/^(feature|fix|chore|docs|refactor|test)\/?$/.test(prefix))throw new Error('Unsupported prefix.');const slug=description.normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60).replace(/-$/,'');if(!slug)throw new Error('Description needs Latin letters or digits.');return {branch:`${prefix.replace(/\/$/,'')}/${slug}`} }
 

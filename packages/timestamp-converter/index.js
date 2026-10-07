@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({value}) { const n=Number(value); const d=Number.isFinite(n)&&value.trim()!==''?new Date(Math.abs(n)<1e11?n*1000:n):new Date(value); if(!Number.isFinite(d.getTime())) throw new Error('Invalid date or timestamp.'); return {iso:d.toISOString(),unixSeconds:Math.floor(d.getTime()/1000),unixMilliseconds:d.getTime()} }
 

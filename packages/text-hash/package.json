@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-text-hash",
   "version": "1.0.0",
   "description": "Calculate SHA-256, SHA-384 or SHA-512 for supplied text.",

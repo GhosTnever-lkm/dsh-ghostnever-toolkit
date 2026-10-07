@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-url-inspector",
   "version": "1.0.0",
   "description": "Parse a URL into scheme, host, path and query parameters.",

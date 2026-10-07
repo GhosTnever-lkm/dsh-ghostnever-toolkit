@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-contrast-checker",
   "version": "1.0.0",
   "description": "Check WCAG contrast ratio between two hex colors.",

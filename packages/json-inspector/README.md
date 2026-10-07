@@ -1,4 +1,4 @@
-﻿# JSON Inspector
+# JSON Inspector
 
 Parse, validate and summarize JSON safely.
 

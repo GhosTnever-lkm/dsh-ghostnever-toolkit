@@ -1,4 +1,4 @@
-﻿# Branch Name
+# Branch Name
 
 Create a clean Git branch slug from a short description.
 

@@ -1,4 +1,4 @@
-﻿# URL Inspector
+# URL Inspector
 
 Parse a URL into scheme, host, path and query parameters.
 

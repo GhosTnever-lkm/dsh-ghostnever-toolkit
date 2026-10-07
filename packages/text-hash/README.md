@@ -1,4 +1,4 @@
-﻿# Text Hash
+# Text Hash
 
 Calculate SHA-256, SHA-384 or SHA-512 for supplied text.
 

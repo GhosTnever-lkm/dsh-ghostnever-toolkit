@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-base64-codec",
   "version": "1.0.0",
   "description": "Encode UTF-8 text to Base64 or decode Base64 to UTF-8.",

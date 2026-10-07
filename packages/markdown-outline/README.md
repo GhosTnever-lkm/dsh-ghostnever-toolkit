@@ -1,4 +1,4 @@
-﻿# Markdown Outline
+# Markdown Outline
 
 Build a heading outline and table of contents from Markdown.
 

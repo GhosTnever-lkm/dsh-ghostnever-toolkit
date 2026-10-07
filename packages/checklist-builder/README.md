@@ -1,4 +1,4 @@
-﻿# Checklist Builder
+# Checklist Builder
 
 Turn a list of tasks into a Markdown checklist.
 

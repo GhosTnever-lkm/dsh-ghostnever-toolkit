@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-text-metrics",
   "version": "1.0.0",
   "description": "Count characters, words, lines and estimate tokens.",

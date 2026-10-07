@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-semver-bump",
   "version": "1.0.0",
   "description": "Increment major, minor or patch in a strict semantic version.",

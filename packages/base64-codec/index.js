@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({text,mode}) { if(mode==='encode') return {result:Buffer.from(text,'utf8').toString('base64')}; if(mode==='decode') { if(!/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(text)) throw new Error('Invalid Base64.'); return {result:Buffer.from(text,'base64').toString('utf8')} } throw new Error('mode must be encode or decode.'); }
 

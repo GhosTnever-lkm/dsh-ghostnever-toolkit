@@ -1,4 +1,4 @@
-﻿import { defineTool } from '@deepseek-ai/dsh-tools'
+import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({text}) { const words=text.trim()?text.trim().split(/\s+/u).length:0; return {characters:text.length,charactersNoSpaces:[...text].filter(c=>! /\s/u.test(c)).length,words,lines:text?text.split(/\r\n|\r|\n/).length:0,paragraphs:text.trim()?text.trim().split(/\n\s*\n/u).length:0,estimatedTokens:Math.ceil([...text].length/4)} }
 

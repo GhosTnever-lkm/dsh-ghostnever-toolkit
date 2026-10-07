@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-ghostnever-byte-size",
   "version": "1.0.0",
   "description": "Convert bytes into readable binary and decimal size units.",
