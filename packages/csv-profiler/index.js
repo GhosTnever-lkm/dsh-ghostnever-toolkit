@@ -2,7 +2,7 @@ import { defineTool } from '@deepseek-ai/dsh-tools'
 
 function run({csv}) { const rows=[]; let row=[],cell='',q=false; for(let i=0;i<csv.length;i++){let c=csv[i]; if(q&&c==='"'&&csv[i+1]==='"'){cell+='"';i++}else if(c==='"'){q=!q}else if(c===','&&!q){row.push(cell);cell=''}else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&csv[i+1]==='\n')i++;row.push(cell);rows.push(row);row=[];cell=''}else cell+=c} if(cell||row.length){row.push(cell);rows.push(row)} const headers=rows.shift()||[];return {columns:headers.length,rows:rows.length,headers:headers.slice(0,100),emptyCells:rows.reduce((n,r)=>n+headers.filter((_,i)=>!(r[i]||'').trim()).length,0),sample:rows.slice(0,5).map(r=>Object.fromEntries(headers.slice(0,100).map((h,i)=>[h,r[i]??''])))} }
 
-const outputSchema = { type: 'object', additionalProperties: false, properties: {columns:{type:'number'},rows:{type:'number'},headers:{type:'array',items:{type:'string'}},emptyCells:{type:'number'},sample:{type:'array',items:{type:'object',additionalProperties:{type:'string'}}}} }
+const outputSchema = { type: 'object', additionalProperties: false, properties: {columns:{type:'number'},rows:{type:'number'},headers:{type:'array',items:{type:'string'}},emptyCells:{type:'number'},sample:{type:'array',items:{type:'object',additionalProperties:true}}} }
 export const name = 'dsh-ghostnever-csv-profiler'
 export const inject = ['tools']
 
