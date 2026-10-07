@@ -1,6 +1,6 @@
 # GhosTnever DSH Toolkit
 
-21 small, local-first plugins for DeepSeek Harness (DSH/Cordis). Each package is independently installable from this monorepo. Utilities only process the arguments sent to them; they do not read files, make network requests, or need API keys.
+A local-first toolkit of 21 independently installable plugins for DeepSeek Harness (DSH/Cordis). Utilities only process the arguments sent to them; they do not read files, make network requests, or need API keys.
 
 ## Install one plugin
 
@@ -8,7 +8,7 @@
 dsh plugin --profile web add "github:GhosTnever-lkm/dsh-ghostnever-toolkit#path:/packages/<package-name>"
 ```
 
-Replace `<package-name>` with a package name from the catalog. For example, install the JSON Inspector with `#path:/packages/json-inspector`. Start or restart the selected profile to load the bundle. Each plugin is installed separately; there is no command that installs all 20.
+Replace `<package-name>` with a package name from the catalog. For example, install the JSON Inspector with `#path:/packages/json-inspector`. Start or restart the selected profile to load the bundle. Each plugin is installed separately; there is no command that installs the entire toolkit at once.
 
 ## Find a plugin
 
@@ -54,4 +54,21 @@ This repository is community-maintained and is not an official DeepSeek product.
 ## License
 
 The toolkit and its plugins are available under the MIT License. See [LICENSE](LICENSE).
+
+## ☕ Support / Pro Version
+
+All plugins in this toolkit are free and open source under MIT. Optional support helps fund maintenance and new tools: [Buy Me a Coffee](https://buymeacoffee.com/azizazimov8) · [Boosty](https://boosty.to/azizazimov). There is no paid version required to use the plugins.
+
+<details>
+<summary>Public crypto addresses</summary>
+
+Send only assets on the matching network.
+
+| Network | Address |
+|:--|:--|
+| Bitcoin | `bc1qn75pj4n7gyl2k5kf2f97elvyenz52q6nn2g30u` |
+| TRON | `TCBSy38X57hA6w2onJcxom24x1febc1mP1` |
+| BNB Smart Chain | `0xD431a917961E0b086B96D9F72b5C8fF19b19068a` |
+
+</details>
 
