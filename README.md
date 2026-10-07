@@ -2,7 +2,7 @@
 
 **21 small, focused plugins for DeepSeek Harness (DSH / Cordis).** Install only the tools you need, directly from this repository. The toolkit is community-maintained and is not an official DeepSeek product.
 
-[![Verify plugin catalog](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify.yml/badge.svg)](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify.yml)
+[![Verify plugin catalog](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify.yml/badge.svg)](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify.yml) · [Download v1.0.0](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/download/v1.0.0/GhosTnever-DSH-Toolkit-v1.0.0.zip) · [Release notes](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/tag/v1.0.0)
 
 ## Quick start
 
@@ -69,3 +69,4 @@ GitHub Actions also syntax-checks all plugin entry points.
 ## License and support
 
 The toolkit is MIT licensed; see [LICENSE](LICENSE). Optional support: [Buy Me a Coffee](https://buymeacoffee.com/azizazimov8) · [Boosty](https://boosty.to/azizazimov). All plugins remain free; there is no paid version required.
+
