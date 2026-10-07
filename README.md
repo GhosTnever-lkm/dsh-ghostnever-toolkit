@@ -1,74 +1,71 @@
 # GhosTnever DSH Toolkit
 
-A local-first toolkit of 21 independently installable plugins for DeepSeek Harness (DSH/Cordis). Utilities only process the arguments sent to them; they do not read files, make network requests, or need API keys.
+**21 small, focused plugins for DeepSeek Harness (DSH / Cordis).** Install only the tools you need, directly from this repository. The toolkit is community-maintained and is not an official DeepSeek product.
 
-## Install one plugin
+[![Verify plugin catalog](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify.yml/badge.svg)](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify.yml)
+
+## Quick start
+
+In a DSH-enabled profile, install a package by its folder name:
 
 ```sh
-dsh plugin --profile web add "github:GhosTnever-lkm/dsh-ghostnever-toolkit#path:/packages/<package-name>"
+dsh plugin --profile web add "github:GhosTnever-lkm/dsh-ghostnever-toolkit#path:/packages/json-inspector"
 ```
 
-Replace `<package-name>` with a package name from the catalog. For example, install the JSON Inspector with `#path:/packages/json-inspector`. Start or restart the selected profile to load the bundle. Each plugin is installed separately; there is no command that installs the entire toolkit at once.
+Replace `json-inspector` with any package listed below. Restart the selected profile if DSH asks. Each plugin is independently installable; this command adds just one package.
 
-## Find a plugin
+## Choose a plugin
 
-| I need to… | Package |
+| Need | Packages |
 |---|---|
 | Inspect JSON or CSV | `json-inspector`, `csv-profiler` |
-| Format or measure text | `markdown-outline`, `text-metrics`, `case-converter`, `checklist-builder` |
-| Work with URLs, dates, encoding or hashes | `url-inspector`, `timestamp-converter`, `base64-codec`, `text-hash`, `uuid-batch` |
+| Read and transform text | `markdown-outline`, `text-metrics`, `case-converter`, `checklist-builder`, `html-entities` |
+| Work with URLs, dates and encodings | `url-inspector`, `timestamp-converter`, `base64-codec`, `text-hash`, `uuid-batch` |
 | Prepare code changes and releases | `branch-name`, `commit-message`, `line-diff-summary`, `changelog-entry`, `semver-bump` |
-| Check or clean supplied content | `secret-redactor`, `html-entities`, `contrast-checker`, `byte-size` |
-| Set up a new repository | `gitignore-builder` |
+| Check colors or sizes | `contrast-checker`, `byte-size` |
+| Protect or clean supplied text | `secret-redactor` |
+| Generate a `.gitignore` | `gitignore-builder` |
 
-## Verify before enabling
-
-This repository is community-maintained and is not an official DeepSeek product. Check the current DSH/Cordis documentation for compatibility before installing. To inspect a package without activating it, download or clone this repository, review that package's `index.js` and `cordis.patch.yml`, and install only after you trust the code. The tools are intended to process only the arguments passed to them; they do not need file access, network access, credentials, or an API key. Do not pass secrets to any plugin.
-
-## Catalog
+## Full catalog
 
 | Package | What it does |
 |---|---|
-| `json-inspector` | Parse, validate and summarize JSON safely. |
-| `markdown-outline` | Build a heading outline and table of contents from Markdown. |
+| `json-inspector` | Parse JSON and summarize its structure. |
+| `markdown-outline` | Build a heading outline and table of contents. |
 | `text-metrics` | Count characters, words, lines and estimate tokens. |
-| `csv-profiler` | Inspect a CSV sample: dimensions, headers and empty cells. |
-| `url-inspector` | Parse a URL into scheme, host, path and query parameters. |
-| `timestamp-converter` | Convert Unix seconds or milliseconds to ISO date and back. |
-| `base64-codec` | Encode UTF-8 text to Base64 or decode Base64 to UTF-8. |
+| `csv-profiler` | Inspect CSV dimensions, headers and empty cells. |
+| `url-inspector` | Parse URL scheme, host, path and query parameters. |
+| `timestamp-converter` | Convert Unix seconds or milliseconds to ISO dates and back. |
+| `base64-codec` | Encode UTF-8 text as Base64 or decode it. |
 | `text-hash` | Calculate SHA-256, SHA-384 or SHA-512 for supplied text. |
-| `uuid-batch` | Generate up to 20 random UUID v4 identifiers. |
-| `contrast-checker` | Check WCAG contrast ratio between two hex colors. |
+| `uuid-batch` | Generate up to 20 UUID v4 identifiers. |
+| `contrast-checker` | Calculate WCAG contrast ratio for two hex colors. |
 | `html-entities` | Escape or unescape HTML special characters. |
-| `case-converter` | Convert text between camel, Pascal, snake, kebab and title case. |
-| `byte-size` | Convert bytes into readable binary and decimal size units. |
+| `case-converter` | Convert text between common naming cases. |
+| `byte-size` | Format byte counts in binary and decimal units. |
 | `changelog-entry` | Format release notes using Keep a Changelog sections. |
-| `branch-name` | Create a clean Git branch slug from a short description. |
-| `commit-message` | Format a Conventional Commit subject from type and summary. |
-| `secret-redactor` | Mask common API token patterns in supplied text. |
-| `line-diff-summary` | Summarize added and removed lines between two text versions. |
-| `semver-bump` | Increment major, minor or patch in a strict semantic version. |
-| `checklist-builder` | Turn a list of tasks into a Markdown checklist. |
-| `gitignore-builder` | Generate a deduplicated `.gitignore` for selected languages, tools, and operating systems. |
+| `branch-name` | Create a clean Git branch slug from a description. |
+| `commit-message` | Format a Conventional Commit subject. |
+| `secret-redactor` | Mask common token patterns in supplied text. |
+| `line-diff-summary` | Summarize added and removed lines between two versions. |
+| `semver-bump` | Increment a strict semantic version. |
+| `checklist-builder` | Turn task lines into a Markdown checklist. |
+| `gitignore-builder` | Generate a deduplicated `.gitignore` for selected tools and platforms. |
 
-## License
+## Privacy and safety
 
-The toolkit and its plugins are available under the MIT License. See [LICENSE](LICENSE).
+Plugins process only the arguments passed to them. They do not make network requests or require file-system access, credentials, or API keys. Avoid passing secrets or sensitive personal data. Review a package's `index.js` and `cordis.patch.yml` before installing if you want to inspect its behavior. Check current DSH/Cordis documentation for compatibility before enabling plugins.
 
-## ☕ Support / Pro Version
+## Verification
 
-All plugins in this toolkit are free and open source under MIT. Optional support helps fund maintenance and new tools: [Buy Me a Coffee](https://buymeacoffee.com/azizazimov8) · [Boosty](https://boosty.to/azizazimov). There is no paid version required to use the plugins.
+The repository includes a catalog and metadata check. Run it locally with Node.js:
 
-<details>
-<summary>Public crypto addresses</summary>
+```sh
+node scripts/verify-catalog.mjs
+```
 
-Send only assets on the matching network.
+GitHub Actions also syntax-checks all plugin entry points.
 
-| Network | Address |
-|:--|:--|
-| Bitcoin | `bc1qn75pj4n7gyl2k5kf2f97elvyenz52q6nn2g30u` |
-| TRON | `TCBSy38X57hA6w2onJcxom24x1febc1mP1` |
-| BNB Smart Chain | `0xD431a917961E0b086B96D9F72b5C8fF19b19068a` |
+## License and support
 
-</details>
-
+The toolkit is MIT licensed; see [LICENSE](LICENSE). Optional support: [Buy Me a Coffee](https://buymeacoffee.com/azizazimov8) · [Boosty](https://boosty.to/azizazimov). All plugins remain free; there is no paid version required.
