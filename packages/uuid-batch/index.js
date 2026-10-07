@@ -11,7 +11,8 @@ export function apply(ctx) {
   ctx.tools.register(defineTool({
     name: 'dsh_ghostnever_uuid_batch',
     description: 'Generate up to 20 random UUID v4 identifiers.',
-    parameters: {count:{type:'number',required:false,description:'Count from 1 to 20.'}},
+    parameters: {count:{type:'number',required:true,description:'Count from 1 to 20.'}}
+,
     output: {
       schema: outputSchema,
       render: (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }]

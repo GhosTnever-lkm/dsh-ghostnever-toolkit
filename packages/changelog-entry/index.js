@@ -10,7 +10,7 @@ export function apply(ctx) {
   ctx.tools.register(defineTool({
     name: 'dsh_ghostnever_changelog_entry',
     description: 'Format release notes using Keep a Changelog sections.',
-    parameters: {version:{type:'string',required:true,description:'Version or release label.'},date:{type:'string',required:false,description:'ISO date (optional).'},added:{type:'array',required:false,items:{type:'string'},description:'Added items.'},changed:{type:'array',required:false,items:{type:'string'},description:'Changed items.'},fixed:{type:'array',required:false,items:{type:'string'},description:'Fixed items.'},removed:{type:'array',required:false,items:{type:'string'},description:'Removed items.'}},
+    parameters: {version:{type:'string',required:true,description:'Version or release label.'},date:{type:'string',required:true,description:'ISO date (optional).'},added:{type:'array',required:true,items:{type:'string'},description:'Added items.'},changed:{type:'array',required:true,items:{type:'string'},description:'Changed items.'},fixed:{type:'array',required:true,items:{type:'string'},description:'Fixed items.'},removed:{type:'array',required:true,items:{type:'string'},description:'Removed items.'}},
     output: {
       schema: outputSchema,
       render: (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }]
