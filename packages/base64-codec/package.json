@@ -1,0 +1,14 @@
+﻿{
+  "name": "dsh-ghostnever-base64-codec",
+  "version": "1.0.0",
+  "description": "Encode UTF-8 text to Base64 or decode Base64 to UTF-8.",
+  "license": "MIT",
+  "author": "GhosTnever-lkm",
+  "type": "module",
+  "main": "index.js",
+  "files": ["index.js", "cordis.patch.yml", "README.md", "LICENSE"],
+  "peerDependencies": { "@deepseek-ai/dsh-tools": "0.2.0-rc.2" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "repository": { "type": "git", "url": "https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit.git", "directory": "packages/base64-codec" },
+  "keywords": ["deepseek-harness", "cordis", "dsh-plugin"]
+}

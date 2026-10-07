@@ -1,0 +1,14 @@
+﻿{
+  "name": "dsh-ghostnever-markdown-outline",
+  "version": "1.0.0",
+  "description": "Build a heading outline and table of contents from Markdown.",
+  "license": "MIT",
+  "author": "GhosTnever-lkm",
+  "type": "module",
+  "main": "index.js",
+  "files": ["index.js", "cordis.patch.yml", "README.md", "LICENSE"],
+  "peerDependencies": { "@deepseek-ai/dsh-tools": "0.2.0-rc.2" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "repository": { "type": "git", "url": "https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit.git", "directory": "packages/markdown-outline" },
+  "keywords": ["deepseek-harness", "cordis", "dsh-plugin"]
+}
