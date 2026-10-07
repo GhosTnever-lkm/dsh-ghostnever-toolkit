@@ -13,7 +13,8 @@ Replace `json-inspector` with a folder from the catalog below. Start or restart 
 ## Catalog
 
 | Package | What it does |
-|---|---|| `json-inspector` | Parse, validate and summarize JSON safely. |
+|---|---|
+| `json-inspector` | Parse, validate and summarize JSON safely. |
 | `markdown-outline` | Build a heading outline and table of contents from Markdown. |
 | `text-metrics` | Count characters, words, lines and estimate tokens. |
 | `csv-profiler` | Inspect a CSV sample: dimensions, headers and empty cells. |
@@ -33,7 +34,6 @@ Replace `json-inspector` with a folder from the catalog below. Start or restart 
 | `line-diff-summary` | Summarize added and removed lines between two text versions. |
 | `semver-bump` | Increment major, minor or patch in a strict semantic version. |
 | `checklist-builder` | Turn a list of tasks into a Markdown checklist. |
-
 ## Packages
 - `json-inspector` - JSON Inspector
 - `markdown-outline` - Markdown Outline
