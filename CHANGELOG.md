@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2] - 2026-10-09
+
+### Fixed
+- Complete the standard MIT license text in the repository and all 21 installable packages.
+- Use the public display name GhosTnever consistently in license notices.
+- Add regression coverage for every distributed license copy.
+
 ## [1.0.1] - 2026-10-08
 
 ### Fixed

@@ -79,3 +79,13 @@ test('each package README uses a closed fenced shell block', () => {
     assert.doesNotMatch(readme, /^`sh\r?$/m)
   }
 })
+
+test('root and all installable packages include the complete MIT license', () => {
+  const licenseFiles = ['../LICENSE', ...packages.map((name) => `../packages/${name}/LICENSE`)]
+  for (const file of licenseFiles) {
+    const license = readFileSync(new URL(file, import.meta.url), 'utf8')
+    assert.match(license, /Copyright \(c\) 2026 GhosTnever/, `${file} should use the public author name`)
+    assert.match(license, /IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM/)
+    assert.match(license.trimEnd(), /DEALINGS IN THE SOFTWARE\.$/)
+  }
+})

@@ -2,7 +2,7 @@
 
 **21 small, focused plugins for DeepSeek Harness (DSH / Cordis).** Install only the tools you need, directly from this repository. The toolkit is community-maintained and is not an official DeepSeek product.
 
-[![Verify plugin catalog](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify-catalog.yml/badge.svg)](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify-catalog.yml) · [Download v1.0.1](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/download/v1.0.1/GhosTnever-DSH-Toolkit-v1.0.1.zip) · [Release notes](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/tag/v1.0.1)
+[![Verify plugin catalog](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify-catalog.yml/badge.svg)](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify-catalog.yml) · [Download v1.0.2](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/download/v1.0.2/GhosTnever-DSH-Toolkit-v1.0.2.zip) · [Release notes](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/tag/v1.0.2)
 
 ## Quick start
 
@@ -58,7 +58,7 @@ Plugins process only the arguments passed to them. They do not make network requ
 
 ## Verification
 
-The latest version is **v1.0.1**. The repository includes a catalog check and a runtime-contract test suite. Run them locally with Node.js 22 or newer:
+The latest version is **v1.0.2**. The repository includes a catalog check and a runtime-contract test suite. Run them locally with Node.js 22 or newer:
 
 ```sh
 npm ci
