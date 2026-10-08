@@ -10,13 +10,18 @@ export function apply(ctx) {
   ctx.tools.register(defineTool({
     name: 'dsh_ghostnever_changelog_entry',
     description: 'Format release notes using Keep a Changelog sections.',
-    parameters: {version:{type:'string',required:true,description:'Version or release label.'},date:{type:'string',required:true,description:'ISO date (optional).'},added:{type:'array',required:true,items:{type:'string'},description:'Added items.'},changed:{type:'array',required:true,items:{type:'string'},description:'Changed items.'},fixed:{type:'array',required:true,items:{type:'string'},description:'Fixed items.'},removed:{type:'array',required:true,items:{type:'string'},description:'Removed items.'}},
+    parameters: {version:{type:'string',required:true,description:'Version or release label.'},date:{type:'string',description:'ISO date; defaults to today.'},added:{type:'array',items:{type:'string'},description:'Added items.'},changed:{type:'array',items:{type:'string'},description:'Changed items.'},fixed:{type:'array',items:{type:'string'},description:'Fixed items.'},removed:{type:'array',items:{type:'string'},description:'Removed items.'}},
     output: {
       schema: outputSchema,
       render: (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }]
     },
     async execute(args) {
-      if (!/^[\\w.+-]{1,40}$/.test(version)) throw new Error('Invalid version label.');
+      if (!/^[A-Za-z0-9][A-Za-z0-9.+-]{0,39}$/.test(args.version)) throw new Error('Invalid version label.');
+      for (const key of ['added', 'changed', 'fixed', 'removed']) {
+        if (args[key] !== undefined && (!Array.isArray(args[key]) || args[key].length > 30)) {
+          throw new Error(`Each section must be an array of up to 30 items: ${key}.`);
+        }
+      }
       return run(args)
     }
   }))

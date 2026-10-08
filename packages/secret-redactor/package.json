@@ -1,6 +1,6 @@
 {
   "name": "dsh-ghostnever-secret-redactor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mask common API token patterns in supplied text.",
   "license": "MIT",
   "author": "GhosTnever-lkm",

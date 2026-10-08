@@ -1,6 +1,6 @@
 {
   "name": "dsh-ghostnever-branch-name",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a clean Git branch slug from a short description.",
   "license": "MIT",
   "author": "GhosTnever-lkm",

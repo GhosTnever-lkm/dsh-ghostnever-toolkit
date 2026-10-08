@@ -1,6 +1,6 @@
 {
   "name": "dsh-ghostnever-checklist-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn a list of tasks into a Markdown checklist.",
   "license": "MIT",
   "author": "GhosTnever-lkm",

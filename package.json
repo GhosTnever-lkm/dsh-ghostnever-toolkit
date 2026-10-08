@@ -3,6 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "verify:catalog": "node scripts/verify-catalog.mjs"
+    "verify:catalog": "node scripts/verify-catalog.mjs",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.0-rc.2"
   }
 }

@@ -16,8 +16,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+      - name: Install test dependencies
+        run: npm ci
       - name: Verify package catalog and metadata
         run: node scripts/verify-catalog.mjs
+      - name: Run package behavior and DSH schema tests
+        run: npm test
       - name: Syntax-check plugin entry points
         shell: bash
         run: |

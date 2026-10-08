@@ -10,7 +10,7 @@ export function apply(ctx) {
   ctx.tools.register(defineTool({
     name: 'dsh_ghostnever_checklist_build',
     description: 'Turn a list of tasks into a Markdown checklist.',
-    parameters: {items:{type:'array',required:true,items:{type:'string'},description:'Up to 100 checklist items.'},checked:{type:'array',required:true,items:{type:'number'},description:'Optional zero-based indices to mark complete.'}},
+    parameters: {items:{type:'array',required:true,items:{type:'string'},description:'Up to 100 checklist items.'},checked:{type:'array',items:{type:'number'},description:'Optional zero-based indices to mark complete.'}},
     output: {
       schema: outputSchema,
       render: (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }]

@@ -10,7 +10,7 @@ export function apply(ctx) {
   ctx.tools.register(defineTool({
     name: 'dsh_ghostnever_commit_message',
     description: 'Format a Conventional Commit subject from type and summary.',
-    parameters: {type:{type:'string',required:true,description:'feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert.'},summary:{type:'string',required:true,description:'Subject summary, max 72 characters.'},scope:{type:'string',required:true,description:'Optional scope.'},breaking:{type:'boolean',required:true,description:'Set true for breaking change.'}},
+    parameters: {type:{type:'string',required:true,description:'feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert.'},summary:{type:'string',required:true,description:'Subject summary, max 72 characters.'},scope:{type:'string',description:'Optional scope.'},breaking:{type:'boolean',description:'Set true for a breaking change.'}},
     output: {
       schema: outputSchema,
       render: (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }]

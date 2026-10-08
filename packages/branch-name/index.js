@@ -10,7 +10,7 @@ export function apply(ctx) {
   ctx.tools.register(defineTool({
     name: 'dsh_ghostnever_branch_name',
     description: 'Create a clean Git branch slug from a short description.',
-    parameters: {description:{type:'string',required:true,description:'Change summary.'},prefix:{type:'string',required:true,description:'feature, fix, chore, docs, refactor, or test.'}},
+    parameters: {description:{type:'string',required:true,description:'Change summary.'},prefix:{type:'string',description:'feature, fix, chore, docs, refactor, or test. Defaults to feature.'}},
     output: {
       schema: outputSchema,
       render: (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }]
