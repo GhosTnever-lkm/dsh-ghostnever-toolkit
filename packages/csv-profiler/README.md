@@ -1,6 +1,6 @@
 # CSV Profiler
 
-Inspect a CSV sample: dimensions, headers and empty cells.
+Inspect a CSV sample: dimensions, headers and empty cells. Malformed quoting is reported instead of silently merging rows or columns.
 
 ## Install
 
