@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3] - 2026-10-13
+
+### Fixed
+- Reject malformed CSV quoting instead of silently swallowing commas or treating an unclosed field as valid data.
+
+### Added
+- Document per-profile plugin enable/disable commands using DSH's `add` and `remove` operations.
+
 ## [1.0.2] - 2026-10-09
 
 ### Fixed

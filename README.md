@@ -2,7 +2,7 @@
 
 **21 small, focused plugins for DeepSeek Harness (DSH / Cordis).** Install only the tools you need, directly from this repository. The toolkit is community-maintained and is not an official DeepSeek product.
 
-[![Verify plugin catalog](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify-catalog.yml/badge.svg)](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify-catalog.yml) · [Download v1.0.2](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/download/v1.0.2/GhosTnever-DSH-Toolkit-v1.0.2.zip) · [Release notes](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/tag/v1.0.2)
+[![Verify plugin catalog](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify-catalog.yml/badge.svg)](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/actions/workflows/verify-catalog.yml) · [Download v1.0.3](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/download/v1.0.3/GhosTnever-DSH-Toolkit-v1.0.3.zip) · [Release notes](https://github.com/GhosTnever-lkm/dsh-ghostnever-toolkit/releases/tag/v1.0.3)
 
 ## Quick start
 
@@ -13,6 +13,20 @@ dsh plugin --profile web add "github:GhosTnever-lkm/dsh-ghostnever-toolkit#path:
 ```
 
 Replace `json-inspector` with any package listed below. Restart the selected profile if DSH asks. Each plugin is independently installable; this command adds just one package.
+
+## Enable or disable a plugin
+
+Plugins are added to a specific DSH profile. Remove one from that profile to disable it there; other profiles are unchanged.
+
+```sh
+# Enable JSON Inspector in the web profile
+dsh plugin --profile web add "github:GhosTnever-lkm/dsh-ghostnever-toolkit#path:/packages/json-inspector"
+
+# Disable it in the web profile
+dsh plugin --profile web remove dsh-ghostnever-json-inspector
+```
+
+Restart the profile after adding or removing a plugin so its bundle list is reloaded. To enable it again, run the `add` command.
 
 ## Choose a plugin
 
@@ -58,7 +72,7 @@ Plugins process only the arguments passed to them. They do not make network requ
 
 ## Verification
 
-The latest version is **v1.0.2**. The repository includes a catalog check and a runtime-contract test suite. Run them locally with Node.js 22 or newer:
+The latest version is **v1.0.3**. The repository includes a catalog check and a runtime-contract test suite. Run them locally with Node.js 22 or newer:
 
 ```sh
 npm ci
